@@ -531,6 +531,10 @@ footer li {
         margin-left: 35px;
     }
 
+    .lien-activites {
+        padding-left: 20px;
+    }
+
     /****** Formulaire ***********/
 
     .location {
@@ -553,6 +557,22 @@ footer li {
 
 
     /****** Filtres ***********/
+
+    .filtres button {
+        margin-right: 0;
+        margin-bottom: 15px;
+        font-size: 14px;
+        width: 165px;
+        text-align: left;
+
+    }
+
+    .fa-info {
+        font-size: 10px;
+        height: 15px;
+        padding-top: 3px;
+        padding-left: 8px;
+    }
 
     .info {
         margin-bottom: 20px;
