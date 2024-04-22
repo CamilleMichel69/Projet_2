@@ -1,4 +1,5 @@
 /****** General ***********/
+
 * {
     font-family: 'Raleway', sans-serif;
     margin-top: 0;
@@ -58,6 +59,7 @@ a {
 .neutral-star {
     color: var(--main-bg-color)
 }
+
 /****** Haut de page ***********/
 
 
@@ -65,9 +67,13 @@ a {
     display: flex;
 }
 
+.liens-navigation {
+    display: flex;
+}
+
 header {
     justify-content: space-between;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 }
 
 .logo {
@@ -78,7 +84,7 @@ header img {
     height: 20px;
 }
 
-ul {
+.haut-de-page ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -89,7 +95,7 @@ nav li {
 }
 
 nav a {
-    margin: 30px 30px 0;
+    margin-left: 70px;
 }
 
 nav li a:hover {
@@ -151,12 +157,12 @@ form {
     border-radius: 15px;
     border: 4px solid #0065FC;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     padding: 8px;
     width: 45px;
     font-weight: 500;
     margin-left: -15px;
-    box-shadow: 0 3px 5px #e6dede;
+    box-shadow: 0 3px 5px #7d7a7a;
 }
 
 .fa-magnifying-glass {
@@ -167,7 +173,7 @@ form {
 
 .filtres-buttons {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .filtres-title {
@@ -182,8 +188,8 @@ form {
     background-color: #ffffff;
     border-radius: 30px;
     border: 2px solid #F2F2F2;
-    margin-left: 15px;
-    padding: 10px 15px;
+    margin-left: 10px;
+    padding: 10px 17px;
 }
 
 .filtres-buttons i {
@@ -216,6 +222,7 @@ form {
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -230,6 +237,7 @@ form {
 }
 
 /****** Hebergements ***********/
+
 #hebergements {
     width: 65%;
 }
@@ -273,8 +281,13 @@ form {
     margin-bottom: 5px;
 }
 
+#hebergements .afficherPlus {
+    margin-bottom: 0;
+}
+
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
 }
@@ -327,9 +340,13 @@ form {
 }
 
 .activities-cards {
+    width: auto;
     display: flex;
     justify-content: space-between;
-    margin: 30px;
+    margin-top: 30px;
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .activities-cards .card {
@@ -361,33 +378,73 @@ footer {
     margin-top: 60px;
 }
 
-footer p {
-    font-weight: bold;
-    margin-bottom: 22px;
-    font-size: 18px;
-}
-
 footer .bas-de-page {
     width: 33%;
     padding: 20px;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer li {
     margin-bottom: 13px;
 }
 
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
+
+
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
 @media (max-width: 1024px) {
+
+    /****** Haut de page ***********/
+
+    nav a {
+        margin-left: 55px;
+    }
+
+    /****** Formulaire ***********/
+
+    form {
+        margin: 30px 0;
+    }
+
+    /****** Filtres ***********/
+
+    .filtres button {
+        margin-left: 0;
+        margin-right: 13px;
+        font-size: 16px;
+    }
+
+    .filtres-buttons {
+        display: block;
+    }
+
+    /****** Hebergements And Populaires ***********/
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
 
-    .hebergements {
+    /****** Hebergements ***********/
+
+    #hebergements {
         width: 100%;
     }
+
+    /****** Populaires ***********/
 
     .populaires {
         width: 100%;
@@ -411,9 +468,164 @@ footer li {
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+
+    /****** Activités ***********/
+
+    .activities-cards .card {
+        height: 300px;
+    }
+
+    .activities-cards img {
+        height: 80%;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
+
 @media (max-width: 767.98px) {
-    /* ... */
+
+    /****** General ***********/
+
+    .main-container {
+        padding: 0;
+    }
+
+    .accroche, .filtres {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /****** Haut de page ***********/
+
+    header {
+        margin-bottom: 30px;
+    }
+
+    .haut-de-page {
+        flex-direction: column;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .liens-navigation li {
+        width: 100%;
+        border-bottom: 2px solid #F2F2F2;
+        padding-bottom: 15px;    
+        padding-top: 30px;    
+    }    
+
+    nav li a:hover {
+        border-top: none;
+    }
+    
+    nav li:hover {
+        color: #0065FC;
+        border-bottom: 2px solid #0065FC;
+        padding-bottom: 15px;
+    }
+
+    .liens-navigation a {
+        margin-left: 35px;
+    }
+
+    /****** Formulaire ***********/
+
+    .location {
+        width: 50px;
+    }
+
+    .city {
+        text-align: left;
+        width: 80%;
+        padding-left: 20px;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .loupe {
+        display: inline;
+    }
+
+
+    /****** Filtres ***********/
+
+    .info {
+        margin-bottom: 20px;
+    }
+
+    /****** Hebergements And Populaires ***********/
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+        padding: 30px 20px;
+    }
+
+    /****** Populaires ***********/
+
+    .populaires {
+        margin-top: 0;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+    }
+
+    .populaires-cards a {
+        width: 100%;
+    }
+
+    /****** Hebergements ***********/
+
+    #hebergements {
+        background-color: #ffffff;
+    }
+
+    .hebergements-cards a {
+        width: 100%;
+    }
+
+    /****** Activités ***********/
+
+    .activities-cards {
+        flex-direction: column;
+    }
+
+    .activities-cards .card {
+        height: 200px;
+        width: auto;
+        margin-bottom: 15px;
+    }
+
+    .activities-cards img {
+        height: 70%;
+    }
+
+    .activities-cards .card-title {
+        padding-top: 15px;
+    }
+
+    /****** Footer ***********/
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .bas-de-page {
+        width: 100%;
+    }
 }
