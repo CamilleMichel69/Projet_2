@@ -603,10 +603,19 @@ footer li {
 
     .populaires-cards .card {
         margin-top: 15px;
+        border-radius: 25px;
     }
 
     .populaires-cards a {
         width: 100%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 15px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
     }
 
     /****** Hebergements ***********/
@@ -617,6 +626,19 @@ footer li {
 
     .hebergements-cards a {
         width: 100%;
+    }
+
+    .hebergements-cards .card {
+        margin-top: 15px;
+    }
+
+    .hebergements-cards .card-title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .hebergements-cards .card-subtitle {
+        font-size: 13px;
     }
 
     /****** Activités ***********/
